@@ -7,7 +7,9 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css'
 
+import Home from "./pages/Home.js"
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -33,34 +35,16 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Header />
-          <div className="container">
+        {/* <div className="flex-column justify-flex-start h-100">
+          <div className="fluid-container"> */}
             <Routes>
               <Route 
                 path="/" 
                 element={<Home />}
               />
-              <Route 
-                path="/login" 
-                element={<Login />}
-              />
-              <Route 
-                path="/signup" 
-                element={<Signup />}
-              />
-              <Route 
-                path="/me" 
-                element={<Profile />}
-              />
-              <Route 
-                path="/profiles/:profileId"
-                element={<Profile />}
-              />
             </Routes>
-          </div>
-          <Footer />
-        </div>
+          {/* </div>
+        </div> */}
       </Router>
     </ApolloProvider>
   );
