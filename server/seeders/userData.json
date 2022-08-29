@@ -1,0 +1,52 @@
+[
+  {
+    "username": "Brian Kernighan",
+    "password": "password01",
+    "highscore": [68, 71]
+  },
+  {
+    "username": "Max Kanat-Alexander",
+    "password": "password02",
+    "highscore": [75, 28]
+  },
+  {
+    "username": "Why The Lucky Stiff",
+    "password": "password03",
+    "highscore": [17, 71, 82]
+  },
+  {
+    "username": "Kent Beck",
+    "password": "password04",
+    "highscore": [84]
+  },
+  {
+    "username": "Edward V. Berard",
+    "password": "password05",
+    "highscore": [29, 95]
+  },
+  {
+    "username": "Alan Kay",
+    "password": "password06",
+    "highscore": [84, 87]
+  },
+  {
+    "username": "C.A.R. Hoare",
+    "password": "password07",
+    "highscore": [91, 45]
+  },
+  {
+    "username": "David Thomas",
+    "password": "password08",
+    "highscore": [68, 75, 81, 85]
+  },
+  {
+    "username": "Donald Knuth",
+    "password": "password09",
+    "highscore": [72, 48]
+  },
+  {
+    "username": "Lernantino",
+    "password": "password10",
+    "highscore": [91, 89]
+  }
+]
