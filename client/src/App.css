@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    height: 100%;
+    background-color: black;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.text-white {
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.fullheight {
+    min-height: 100vh;
+}
