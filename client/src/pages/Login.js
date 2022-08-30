@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
-import { LOGIN_USER } from "../utils/mutations";
+import { LOGIN_USER, ADD_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 
@@ -43,7 +43,7 @@ const Login = (props) => {
   return (
     <main className="container mb-4">
       <div className="col-12 col-lg-10">
-        <div className="card">
+        <div className="card bg-dark">
           <ul class="nav-tabs d-flex" id="loginTabs" role="tablist">
             <li class="nav-item">
               <a
@@ -74,45 +74,49 @@ const Login = (props) => {
             </li>
           </ul>
 
-          <div className="card-body">
-            {data ? (
-              <p>
-                You are logged in! You may now head{" "}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input p-2"
-                  placeholder="Your username"
-                  name="username"
-                  type="text"
-                  value={formState.username}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input p-2"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="btn btn-block btn-info p-2"
-                  style={{ cursor: "pointer" }}
-                  type="submit"
-                >
-                  Login
-                </button>
-              </form>
-            )}
+          <div class="tab-content" id="nav-tabContent">
+            <div className="card-body" class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="login">
+              {data ? (
+                <p>
+                  You are logged in! You may now head{" "}
+                  <Link to="/">back to the homepage.</Link>
+                </p>
+              ) : (
+                <form onSubmit={handleFormSubmit}>
+                  <input
+                    className="form-input p-2"
+                    placeholder="Your username"
+                    name="username"
+                    type="text"
+                    value={formState.username}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="form-input p-2"
+                    placeholder="******"
+                    name="password"
+                    type="password"
+                    value={formState.password}
+                    onChange={handleChange}
+                  />
+                  <button
+                    className="btn btn-block btn-info p-2"
+                    style={{ cursor: "pointer" }}
+                    type="submit"
+                  >
+                    Login
+                  </button>
+                </form>
+              )}
 
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
+              {error && (
+                <div className="my-3 p-3 bg-danger text-white">
+                  {error.message}
+                </div>
+              )}
+            </div>
+
+
           </div>
         </div>
       </div>
