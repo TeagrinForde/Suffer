@@ -20,7 +20,6 @@ body {
   font-family: "Press Start 2P", cursive;
   text-align: center;
   min-height: 100vh;
-  z-index: -1;
 }
 
 #loginContainer {
@@ -30,7 +29,8 @@ body {
 
 #homeTitle {
   font-size: 100px;
-  color: var(--bright-green);
+  color: #186dce;
+  text-shadow: 0.5vmin 0.5vmin 0 #e79c10, -0.5vmin -0.5vmin 0 #d53a33;
 }
 
 .homeBody {
@@ -43,3 +43,70 @@ body {
   align-items: center;
 }
 
+/* 
+
+profile / highscore page
+
+*/
+
+#scoreTitle {
+  font-family: "Press Start 2P", cursive;
+  font-size: 90px;
+  color: rgb(0, 119, 255);
+  text-shadow: 0.5vmin 0.5vmin 0 #e79c10, -0.5vmin -0.5vmin 0 #d53a33;
+}
+
+#scoreSubTitle {
+  font-family: "Press Start 2P", cursive;
+  font-size: 40px;
+  color: white
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+table {
+  font-family: "Press Start 2P", cursive;
+  font-size: 17px;
+  border-radius: 10px;
+  border-spacing: 0;
+  text-align: center;
+}
+
+td {
+  /* border-style: solid; */
+  /* border-width: 0 1px 1px 0; */
+  /* border-color: rgb(0, 0, 0); */
+}
+
+/* th:first-child {
+  border-top-left-radius: 5px;
+}
+th:last-child {
+  border-top-right-radius: 5px;
+  border-right: none;
+}
+th:first-child,
+td:first-child {
+  padding: 7px 8px;
+} */
+
+td {
+  padding: 7px 20px;
+  background: none;
+  color: rgba(28, 183, 204, 0.6);
+}
+
+tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+tr td:last-child {
+  border-right: none;
+}
