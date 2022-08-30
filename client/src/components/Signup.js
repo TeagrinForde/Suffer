@@ -49,7 +49,7 @@ const Signup = () => {
         ) : (
           <form onSubmit={handleFormSubmit}>
             <input
-              className="form-input"
+              className="form-input p-2"
               placeholder="Your username"
               name="username"
               type="text"
@@ -57,7 +57,7 @@ const Signup = () => {
               onChange={handleChange}
             />
             <input
-              className="form-input"
+              className="form-input p-2"
               placeholder="******"
               name="password"
               type="password"
@@ -65,7 +65,7 @@ const Signup = () => {
               onChange={handleChange}
             />
             <button
-              className="btn btn-block btn-info"
+              className="btn btn-block btn-info p-2"
               style={{ cursor: 'pointer' }}
               type="submit"
             >

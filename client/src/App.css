@@ -23,6 +23,11 @@ body {
   z-index: -1;
 }
 
+#loginContainer {
+  font-family: "Press Start 2P", cursive;
+  padding-top: 9rem;
+}
+
 #homeTitle {
   font-size: 100px;
   color: var(--bright-green);
