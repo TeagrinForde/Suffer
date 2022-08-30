@@ -3,7 +3,8 @@ import React from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-import { QUERY_SINGLE_USER, QUERY_ME } from "../utils/queries";
+import { QUERY_SINGLE_USER, QUERY_ME, QUERY_HIGHSCORES } from "../utils/queries";
+import ScoreRow from "../components/ScoreRow";
 
 import Auth from "../utils/auth";
 
@@ -14,6 +15,9 @@ const Profile = () => {
   const { loading, data } = useQuery(userId ? QUERY_SINGLE_USER : QUERY_ME, {
     variables: { userId: userId },
   });
+
+  const { scoreLoading, scoreData } = useQuery(QUERY_HIGHSCORES);
+  const highscores = scoreData?.highscores || [];
 
   // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
   const profile = data?.me || data?.user || {};
@@ -43,70 +47,19 @@ const Profile = () => {
       <h1 class='p-5' id='scoreTitle'> {title} </h1>
       <p id="scoreSubTitle">HIGH SCORES</p>
       <table>
-        
-        <tr>
-          <td>1</td>
-          <td>Hunter</td>
+        {() => {
 
-          <td>69420</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Teagrin</td>
-
-          <td>707070</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Charles</td>
-
-          <td>123456</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Will</td>
-
-          <td>88844</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Andy</td>
-
-          <td>34796</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Tom</td>
-
-          <td>3412</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>John</td>
-
-          <td>3474</td>
-        </tr>
-        <tr>
-          <td>8</td>
-
-          <td>Michael</td>
-
-          <td>34701</td>
-        </tr>
-        <tr>
-          <td>9</td>
-
-          <td>Jack</td>
-
-          <td>3400</td>
-        </tr>
-        <tr>
-          <td>10</td>
-
-          <td>Jonny</td>
-
-          <td>34321</td>
-        </tr>
+        }}
+        <ScoreRow position="1" name="Hunter" score="69420"/>
+        <ScoreRow position="2" name="Teagrin" score="707070"/>
+        <ScoreRow position="3" name="Charles" score="123456"/>
+        <ScoreRow position="4" name="Will" score="88844"/>
+        <ScoreRow position="5" name="Andy" score="34796"/>
+        <ScoreRow position="6" name="Tom" score="3412"/>
+        <ScoreRow position="7" name="John" score="3474"/>
+        <ScoreRow position="8" name="Michael" score="34701"/>
+        <ScoreRow position="9" name="Jack" score="3400"/>
+        <ScoreRow position="10" name="Jonny" score="34321"/>
       </table>
     </div>
   );
