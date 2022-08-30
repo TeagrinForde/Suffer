@@ -38,8 +38,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column align-items-center h-100">
-          <div className="fluid-container">
+        {/* <div className="flex-column justify-flex-start h-100"> */}
+          <div className="centerContent">
             <Routes>
               <Route 
                 path="/" 
@@ -56,7 +56,8 @@ function App() {
 
             </Routes>
           </div>
-        </div>
+        {/*</div> */}
+
       </Router>
     </ApolloProvider>
   );
