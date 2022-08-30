@@ -19,7 +19,7 @@ const Profile = () => {
   );
 
   // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
-  const profile = data?.me || data?.profile || {};
+  const profile = data?.me || data?.user || {};
 
   // Use React Router's `<Redirect />` component to redirect to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data._id === userId) {
@@ -30,9 +30,9 @@ const Profile = () => {
     return <div>Loading...</div>;
   }
 
-  if (!profile?.name) {
+  if (!profile?.username) {
     return (
-      <h4>
+      <h4 class='text-white'>
         You need to be logged in to see your profile page. Use the navigation
         links above to sign up or log in!
       </h4>
@@ -40,7 +40,7 @@ const Profile = () => {
   }
 
   return (
-    <div>PROFILE PAGE WOOOO</div>
+    <div class='text-white'>PROFILE PAGE WOOOO</div>
   );
 };
 
