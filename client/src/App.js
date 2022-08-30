@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 
 import Home from "./pages/Home.js";
-import Login from './components/Login';
+import LoginPage from './pages/LoginPage.js';
 import Profile from "./pages/Profile.js";
 
 const httpLink = createHttpLink({
@@ -47,7 +47,7 @@ function App() {
               />
               <Route 
                 path="/login"
-                element={<Login />}
+                element={<LoginPage />}
                 />
               <Route
               path="/profile"
