@@ -10,7 +10,7 @@ const Signup = () => {
     username: '',
     password: '',
   });
-  const [addProfile, { error, data }] = useMutation(LOGIN_USER);
+  const [addUser, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
   const handleChange = (event) => {
@@ -28,11 +28,11 @@ const Signup = () => {
     console.log(formState);
 
     try {
-      const { data } = await addProfile({
+      const { data } = await addUser({
         variables: { ...formState },
       });
 
-      Auth.login(data.addProfile.token);
+      Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
     }
@@ -46,9 +46,8 @@ const Signup = () => {
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
+              You are logged in! Time to <Link to="/">SUFFER.</Link>
+            </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
