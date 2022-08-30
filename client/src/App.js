@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 
 import Home from "./pages/Home.js";
-import Login from './pages/Login';
+import LoginPage from './pages/LoginPage.js';
 import Profile from "./pages/Profile.js";
 
 const httpLink = createHttpLink({
@@ -38,8 +38,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        {/* <div className="flex-column justify-flex-start h-100">
-          <div className="fluid-container"> */}
+        {/* <div className="flex-column justify-flex-start h-100"> */}
+          <div className="centerContent">
             <Routes>
               <Route 
                 path="/" 
@@ -47,7 +47,7 @@ function App() {
               />
               <Route 
                 path="/login"
-                element={<Login />}
+                element={<LoginPage />}
                 />
               <Route
               path="/profile"
@@ -55,8 +55,9 @@ function App() {
               />
 
             </Routes>
-          {/* </div>
-        </div> */}
+          </div>
+        {/*</div> */}
+
       </Router>
     </ApolloProvider>
   );

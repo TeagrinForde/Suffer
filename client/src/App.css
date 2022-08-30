@@ -20,9 +20,6 @@ body {
   font-family: "Press Start 2P", cursive;
   text-align: center;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: -1;
 }
 
@@ -35,6 +32,9 @@ body {
   padding-top: 9rem;
 }
 
-ul {
-  list-style: none;
+.centerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
