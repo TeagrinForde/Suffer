@@ -69,7 +69,7 @@ const Signup = () => {
               style={{ cursor: 'pointer' }}
               type="submit"
             >
-              Submit
+              Let's SUFFER!
             </button>
           </form>
         )}
