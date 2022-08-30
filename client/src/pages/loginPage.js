@@ -27,7 +27,7 @@ function LoginPage() {
 
     return (
         <div className="container" class="align-middle" id='loginContainer'>
-            <div>
+            <div class="col-auto">
                 <button id="login" onClick={() => setTab('login')}>Login</button>
                 <button id="signUp" onClick={() => setTab('signUp')}>Sign Up</button>
             </div>
