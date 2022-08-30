@@ -8,7 +8,7 @@ const Home = () => {
 
 
   return (
-  <div onClick={document.location.pathname = "/login"} className="p-auto" id='homeContainer'>
+  <div onClick={ () => document.location.pathname = "/login"} className="p-auto centerContent" id='homeContainer'>
     <div>
       <h1 className="" id='homeTitle'>
         {title}
