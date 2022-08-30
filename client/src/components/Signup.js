@@ -1,24 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
-import { LOGIN_USER } from "../utils/mutations";
+import { ADD_USER } from "../utils/mutations";
 
 import Auth from '../utils/auth';
 
-const Signup = () => {
-  const [formState, setFormState] = useState({
-    username: '',
-    password: '',
-  });
-  const [addUser, { error, data }] = useMutation(LOGIN_USER);
+const Signup = (props) => {
+  const [formState, setFormState] = useState({ username: "", password: "" });
+  const [addUser, { error, data }] = useMutation(ADD_USER);
 
   // update state based on form input changes
   const handleChange = (event) => {
-    const { username, value } = event.target;
+    const { name, value } = event.target;
 
     setFormState({
       ...formState,
-      [username]: value,
+      [name]: value,
     });
   };
 
@@ -32,10 +29,15 @@ const Signup = () => {
         variables: { ...formState },
       });
 
-      Auth.login(data.addUser.token);
+      Auth.addUser(data.addUser.token);
     } catch (e) {
       console.error(e);
     }
+
+    setFormState({
+      username: "",
+      password: "",
+    });
   };
 
   return (
@@ -44,7 +46,7 @@ const Signup = () => {
       <div className="card-body">
         {data ? (
           <p>
-          You are logged in! Time to <Link to="/">SUFFER.</Link>
+          You are logged in! Time to <Link to="/profile">SUFFER</Link>
         </p>
         ) : (
           <form onSubmit={handleFormSubmit}>
