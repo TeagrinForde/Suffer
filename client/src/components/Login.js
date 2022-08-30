@@ -40,45 +40,45 @@ const Login = (props) => {
   };
 
   return (
-    <div className="card-body">
-      {data ? (
-        <p> 
-          You are logged in! Time to{' '}
-          <Link to="/">SUFFER.</Link>
-        </p>
-      ) : (
-        <form onSubmit={handleFormSubmit}>
-          <input
-            className="form-input p-2"
-            placeholder="Your username"
-            name="username"
-            type="text"
-            value={formState.username}
-            onChange={handleChange}
-          />
-          <input
-            className="form-input p-2"
-            placeholder="******"
-            name="password"
-            type="password"
-            value={formState.password}
-            onChange={handleChange}
-          />
-          <button
-            className="btn btn-block btn-info p-2"
-            style={{ cursor: "pointer" }}
-            type="submit"
-          >
-            Login
-          </button>
-        </form>
-      )}
+    <div className="card">
+      <h4 className="card-header bg-dark text-light p-2">Login</h4>
+      <div className="card-body">
+        {data ? (
+          <p>
+            You are logged in! Time to <Link to="/">SUFFER.</Link>
+          </p>
+        ) : (
+          <form onSubmit={handleFormSubmit}>
+            <input
+              className="form-input p-2"
+              placeholder="Your username"
+              name="username"
+              type="text"
+              value={formState.username}
+              onChange={handleChange}
+            />
+            <input
+              className="form-input p-2"
+              placeholder="******"
+              name="password"
+              type="password"
+              value={formState.password}
+              onChange={handleChange}
+            />
+            <button
+              className="btn btn-block btn-info p-2"
+              style={{ cursor: "pointer" }}
+              type="submit"
+            >
+              Login
+            </button>
+          </form>
+        )}
 
-      {error && (
-        <div className="my-3 p-3 bg-danger text-white">
-          {error.message}
-        </div>
-      )}
+        {error && (
+          <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
+        )}
+      </div>
     </div>
   );
 };
