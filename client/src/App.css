@@ -93,3 +93,19 @@ tr:last-child td:last-child {
 tr td:last-child {
   border-right: none;
 }
+
+.enterCard {
+  background-color: transparent;
+}
+
+.enterTitle {
+  background-color:  #186dce;
+}
+
+.enterbtn {
+  background-color: #d53a33;
+}
+
+.focus {
+  background-color: #e79c10;
+}

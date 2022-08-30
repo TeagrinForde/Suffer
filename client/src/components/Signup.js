@@ -41,8 +41,8 @@ const Signup = (props) => {
   };
 
   return (
-    <div className="card">
-      <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+    <div className="card enterCard p-3">
+      <h4 className="card-header enterTitle text-light p-2">Sign Up</h4>
       <div className="card-body">
         {data ? (
           <p>
@@ -67,7 +67,7 @@ const Signup = (props) => {
               onChange={handleChange}
             />
             <button
-              className="btn btn-block btn-info p-2"
+              className="btn btn-block btn-info p-2 enterbtn"
               style={{ cursor: 'pointer' }}
               type="submit"
             >
