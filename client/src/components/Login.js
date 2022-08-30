@@ -45,7 +45,7 @@ const Login = (props) => {
       <div className="card-body">
         {data ? (
           <p>
-            You are logged in! Time to <Link to="/">SUFFER.</Link>
+            You are logged in! Time to <Link to="/profile">SUFFER</Link>
           </p>
         ) : (
           <form onSubmit={handleFormSubmit}>
