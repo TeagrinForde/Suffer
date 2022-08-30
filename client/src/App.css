@@ -26,6 +26,8 @@ body {
 #loginContainer {
   font-family: "Press Start 2P", cursive;
   padding-top: 9rem;
+  padding-left: 3rem;
+  max-width: auto;
 }
 
 #homeTitle {
