@@ -1,21 +1,49 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_PROFILES = gql`
-  query allProfiles {
-    profiles {
+export const QUERY_USERS = gql`
+  query allUsers {
+    users {
       _id
-      name
-      skills
+      username
+      highscores {
+        _id
+        score
+        createdAt
+      }
     }
   }
 `;
 
-export const QUERY_SINGLE_PROFILE = gql`
-  query singleProfile($profileId: ID!) {
-    profile(profileId: $profileId) {
+export const QUERY_SINGLE_USER = gql`
+  query oneUser($userId: ID!) {
+    user(userId: $userId) {
       _id
-      name
-      skills
+      username
+      highscores {
+        _id
+        score
+        createdAt
+      }
+    }
+  }
+`;
+
+export const QUERY_HIGHSCORES = gql`
+  query allHighscores {
+    highscores {
+      _id
+      score
+      createdAt
+    }
+  }
+`;
+
+export const QUERY_SINGLE_HIGHSCORE = gql`
+  query oneHighscore($highscoreId: ID!) {
+    highscore(highscoreId: $highscoreId) {
+      _id
+      score
+      createdAt
     }
   }
 `;
@@ -24,8 +52,12 @@ export const QUERY_ME = gql`
   query me {
     me {
       _id
-      name
-      skills
+      username
+      highscores {
+        _id
+        score
+        createdAt
+      }
     }
   }
 `;
