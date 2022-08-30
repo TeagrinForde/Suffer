@@ -53,7 +53,10 @@ function App() {
               path="/profile"
               element={<Profile/>}
               />
-
+              <Route
+              path="/me"
+              element={<Profile/>}
+              />
             </Routes>
           </div>
         {/*</div> */}

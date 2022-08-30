@@ -49,6 +49,7 @@ const resolvers = {
       return { token, user };
     },
     addHighscore: async (parent, { score }, context) => {
+      // console.log(context.user);
       if (context.user) {
         const highscore = await Highscore.create({
           score
