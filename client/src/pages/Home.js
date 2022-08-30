@@ -4,11 +4,11 @@ import React from 'react';
 
 // import { QUERY_PROFILES } from '../utils/queries';
 const title = '<SUFFER/>';
+
 const Home = () => {
 
-
   return (
-  <div onClick={ () => document.location.pathname = "/login"} className="p-auto centerContent" id='homeContainer'>
+  <div className="p-auto centerContent" id='homeContainer' onClick={() => document.location.pathname='/login'}>
     <div>
       <h1 className="" id='homeTitle'>
         {title}
