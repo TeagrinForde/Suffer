@@ -28,4 +28,4 @@ const characterArray = [
 ];
 
 //set function to assign a character image array and run when SignUp button is clicked 
-const 
+
