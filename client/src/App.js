@@ -13,6 +13,7 @@ import Home from "./pages/Home.js";
 import LoginPage from './pages/LoginPage.js';
 import Profile from "./pages/Profile.js";
 import Header from "./components/Header.js";
+import Directions from './components/Directions';
 
 
 const httpLink = createHttpLink({
@@ -54,7 +55,7 @@ function App() {
                 />
               <Route
               path="/profile"
-              element={[<Header />, <Profile/>]}
+              element={[<Header />, <Directions/>, <Profile/>]}
               />
               <Route
               path="/me"

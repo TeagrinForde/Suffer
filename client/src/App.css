@@ -174,8 +174,21 @@ profile / highscore page
 
 #scoreSubTitle {
   font-family: "Press Start 2P", cursive;
-  font-size: 40px;
+  font-size: 30px;
   color: rgb(255, 255, 255);
+}
+
+#directions {
+  font-family: "Press Start 2P", cursive;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 70px;
+}
+
+#welcome {
+  font-family: "Press Start 2P", cursive;
+  color: greenyellow;
+  text-align: center;
 }
 
 .wrapper {
