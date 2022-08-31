@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navigate } from "react-router-dom";
 // import Typical from "react-typical";
 // import { useQuery } from '@apollo/client';
 
