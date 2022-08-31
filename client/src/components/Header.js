@@ -24,7 +24,7 @@ const Header = () => {
             </Link>
           </li> */}
           <li class="nav-item">
-            <Link to="login" class="nav-link" onClick={logout} id="navText">
+            <Link to="" class="nav-link" onClick={logout} id="navText">
               Logout
             </Link>
           </li>

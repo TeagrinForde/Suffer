@@ -11,10 +11,10 @@ const resolvers = {
       return await User.findById(args.id).populate('highscores');
     },
     highscores: async () => {
-      return await Highscore.find({}).populate('user');
+      return await Highscore.find({});
     },
     highscore: async (parent, { highscoreId }) => {
-      return Highscore.findOne({ _id: highscoreId }).populate('user');
+      return Highscore.findOne({ _id: highscoreId });
     },
     // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {

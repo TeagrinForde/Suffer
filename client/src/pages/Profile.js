@@ -16,7 +16,7 @@ const Profile = () => {
     variables: { userId: userId },
   });
 
-  const { scoreLoading, scoreData } = useQuery(QUERY_HIGHSCORES);
+  const { data: scoreData } = useQuery(QUERY_HIGHSCORES);
   const highscores = scoreData?.highscores || [];
 
   // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
@@ -24,7 +24,7 @@ const Profile = () => {
 
   // Use React Router's `<Redirect />` component to redirect to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data._id === userId) {
-    return <Navigate to="/me" />;
+    return <Navigate to="/profile" />;
   }
 
   if (loading) {
@@ -33,33 +33,44 @@ const Profile = () => {
 
   if (!profile?.username) {
     return (
-      <h4 class="text-white">
-        You need to be logged in to see your profile page. Use the navigation
-        links above to sign up or log in!
-      </h4>
+      <Navigate to="/login" />
     );
   }
-
+  
+  // the formatting of the title requires a variable to be inserted into the 
+  // HTML for the sake of rendering itself
   const title = "<SUFFER/>";
 
+  // loop to display the scores on the page
+  const showScores = () => {
+    const sortedList = sortScores(highscores);
+    let scoreList = [];
+    for (let i = 0; i < sortedList.length; i++) {
+      scoreList.push(<ScoreRow key={i} position={i+1} name={sortedList[i].user} score={sortedList[i].score}/>);
+    }
+    return scoreList;
+  }
+
+  function sortScores(scoreList) {
+    const shortList = scoreList.slice(0, 10);
+    shortList.sort(by);
+    return shortList;
+  }
+
+  function by(a, b) {
+    if (a.score > b.score) return -1;
+    else if (a.score < b.score) return 1;
+    else return 0;
+  }
+  
   return (
     <div class="wrapper text-white d-flex flex-column">
       <h1 class='p-5' id='scoreTitle'> {title} </h1>
       <p id="scoreSubTitle">HIGH SCORES</p>
       <table>
-        {() => {
-
-        }}
-        <ScoreRow position="1" name="Hunter" score="69420"/>
-        <ScoreRow position="2" name="Teagrin" score="707070"/>
-        <ScoreRow position="3" name="Charles" score="123456"/>
-        <ScoreRow position="4" name="Will" score="88844"/>
-        <ScoreRow position="5" name="Andy" score="34796"/>
-        <ScoreRow position="6" name="Tom" score="3412"/>
-        <ScoreRow position="7" name="John" score="3474"/>
-        <ScoreRow position="8" name="Michael" score="34701"/>
-        <ScoreRow position="9" name="Jack" score="3400"/>
-        <ScoreRow position="10" name="Jonny" score="34321"/>
+        <tbody>
+        {showScores()}
+        </tbody>
       </table>
     </div>
   );
