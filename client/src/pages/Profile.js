@@ -41,6 +41,9 @@ const Profile = () => {
   // HTML for the sake of rendering itself
   const title = "<SUFFER/>";
 
+  //username variable from profile
+  const username = profile.username;
+
   // loop to display the scores on the page
   const showScores = () => {
     const sortedList = sortScores(highscores);
@@ -65,7 +68,8 @@ const Profile = () => {
   
   return (
     <div class="wrapper text-white d-flex flex-column">
-      <h1 class='p-5' id='scoreTitle'> {title} </h1>
+      <h1 class='p-1' id='scoreTitle'> {title} </h1>
+      <p id='welcome'>Welcome {username}</p>
       <p id="scoreSubTitle">HIGH SCORES</p>
       <table>
         <tbody>
