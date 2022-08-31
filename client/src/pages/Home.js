@@ -1,6 +1,6 @@
 import React from 'react';
-import { Navigate } from "react-router-dom";
-// import Typical from "react-typical";
+// import { Navigate } from "react-router-dom";
+import Typical from "react-typical";
 // import { useQuery } from '@apollo/client';
 
 // import { QUERY_PROFILES } from '../utils/queries';
@@ -14,7 +14,13 @@ const Home = () => {
       <h1 className="" id='homeTitle'>
         {title}
       </h1>
-      <h3 className="homeBody">Click Anywhere to Begin</h3>
+      <h3 className="homeBody">
+        <Typical
+            steps={[
+              'Click Anywhere to Begin',
+            ]}
+          />
+      </h3>
     </div>
     {/*This is where the decorative icons would go*/}
   </div>
