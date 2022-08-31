@@ -26,6 +26,7 @@ function LoginPage() {
     fcsBtn.classList.add("focus");
   }, [tab]);
 
+
   return (
     <div
       className="container"
@@ -47,6 +48,7 @@ function LoginPage() {
       {switchTab(tab)}
     </div>
   );
+
 }
 
 export default LoginPage;

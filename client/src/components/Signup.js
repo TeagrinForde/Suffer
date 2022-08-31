@@ -71,7 +71,9 @@ const Signup = (props) => {
               style={{ cursor: 'pointer' }}
               type="submit"
             >
-              Let's SUFFER
+
+              Let's SUFFER!
+
             </button>
           </form>
         )}
