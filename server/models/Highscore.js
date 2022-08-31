@@ -12,8 +12,8 @@ const highscoreSchema = new Schema({
     get: (timestamp) => dateFormat(timestamp),
   },
   user: {
-    type: Schema.Types.ObjectId,
-    ref: 'User'
+    type: String,
+    required: true
   }
 });
 

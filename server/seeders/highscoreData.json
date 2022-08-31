@@ -1,32 +1,42 @@
 [
   {
-    "score": 68
+    "score": 68,
+    "user": "Edward V. Berard"
   },
   {
-    "score": 75
+    "score": 75,
+    "user": "Kent Beck"
   },
   {
-    "score": 28
+    "score": 28,
+    "user": "Why The Lucky Stiff"
   },
   {
-    "score": 59
+    "score": 59,
+    "user": "C.A.R. Hoare"
   },
   {
-    "score": 86
+    "score": 86,
+    "user": "David Thomas"
   },
   {
-    "score": 77
+    "score": 77,
+    "user": "Brian Kernighan"
   },
   {
-    "score": 62
+    "score": 62,
+    "user": "Lernantino"
   },
   {
-    "score": 92
+    "score": 92,
+    "user": "Alan Kay"
   },
   {
-    "score": 84
+    "score": 84,
+    "user": "Donald Knuth"
   },
   {
-    "score": 79
+    "score": 79,
+    "user": "C.A.R. Hoare"
   }
 ]
