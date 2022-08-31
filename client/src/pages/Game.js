@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+
 export const Games = () => {
   const canvas = document.querySelector("canvas");
   const scoreEl = document.querySelector("#scoreEl");
