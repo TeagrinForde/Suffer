@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
+// import Characters from '../components/Characters'; 
 
 import Auth from '../utils/auth';
 
@@ -70,6 +71,7 @@ const Signup = (props) => {
               className="btn btn-block btn-info p-2 enterbtn"
               style={{ cursor: 'pointer' }}
               type="submit"
+              //run generateCharacter function
             >
               Let's SUFFER!
             </button>
