@@ -8,7 +8,7 @@ const title = '<SUFFER/>';
 const Home = () => {
 
   return (
-  <div className="p-auto centerContent" id='homeContainer' onClick={() => document.location.pathname='/login'}>
+  <div className="centerContent" id='homeContainer' onClick={() => document.location.pathname='/login'}>
     <div>
       <h1 className="" id='homeTitle'>
         {title}

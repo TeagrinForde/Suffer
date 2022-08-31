@@ -14,18 +14,101 @@ body {
   --bright-green: #00ff41;
 }
 
+/* NAV BAR STYLING */
+#navContainer {
+  font-family: "Press Start 2P", cursive;
+  display: flex;
+  justify-content: end;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  /* z-index: 1; */
+}
+
+#navText {
+  font-size: 30px;
+  color: #f5f5f5;
+  text-decoration: none;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.712);
+}
+
+#navText:hover {
+  font-size: 31px;
+  color: #f5f5f5;
+  transition: 0.4s;
+  cursor: pointer;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+#navText::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #186dce 0%, #d53a33 100%);
+  transition: width 0.3s;
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+#navText:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  #navText {
+    transition: 0.8s all ease;
+    font-size: 15px;
+    color: #f5f5f5;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #navText-bg {
+    transition: 0.8s all ease;
+    font-size: 15px;
+    color: #f5f5f5;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #navText:hover {
+    transition: 0.8s all ease;
+    font-size: 16px;
+    color: #d53a33;
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #navText-bg:hover {
+    transition: 0.8s all ease;
+    font-size: 16px;
+    /* color: #ce243b; */
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* 
+
+HOME
+
+*/
+
 #homeContainer {
   background-color: #121212;
-  color: white;
+  color: #f5f5f5;
   font-family: "Press Start 2P", cursive;
   text-align: center;
   min-height: 100vh;
   width: 100vw;
-}
-
-#loginContainer {
-  font-family: "Press Start 2P", cursive;
-  padding-top: 9rem;
 }
 
 #homeTitle {
@@ -34,8 +117,40 @@ body {
   text-shadow: 0.5vmin 0.5vmin 0 #e79c10, -0.5vmin -0.5vmin 0 #d53a33;
 }
 
+@media screen and (max-width: 960px) {
+  #homeTitle {
+    transition: 0.8s all ease;
+    font-size: 50px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #homeTitle {
+    transition: 0.8s all ease;
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
 .homeBody {
   padding-top: 9rem;
+}
+
+@media screen and (max-width: 960px) {
+  .homeBody {
+    transition: 0.8s all ease;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .homeBody {
+    transition: 0.8s all ease;
+    font-size: 15px;
+    text-align: center;
+  }
 }
 
 .centerContent {
@@ -44,11 +159,11 @@ body {
   align-items: center;
 }
 
-/* 
+/**********************************************************************
 
 profile / highscore page
 
-*/
+************************************************************************/
 
 #scoreTitle {
   font-family: "Press Start 2P", cursive;
@@ -60,7 +175,7 @@ profile / highscore page
 #scoreSubTitle {
   font-family: "Press Start 2P", cursive;
   font-size: 40px;
-  color: rgb(255, 255, 255)
+  color: rgb(255, 255, 255);
 }
 
 .wrapper {
@@ -94,16 +209,55 @@ tr td:last-child {
   border-right: none;
 }
 
+/**********************************************************************
+
+login page
+
+************************************************************************/
+
+#loginContainer {
+  background-color: #121212;
+  /* color: white; */
+  font-family: "Press Start 2P", cursive;
+  /* text-align: center; */
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.logSignBtns {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 420px) {
+  .form-input {
+    transition: 0.8s all ease;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .card-header {
+    transition: 0.8s all ease;
+    text-align: center;
+  }
+}
+
 .enterCard {
   background-color: transparent;
 }
 
 .enterTitle {
-  background-color:  #186dce;
+  background-color: #186dce;
 }
 
 .enterbtn {
   background-color: #d53a33;
+  border: none;
+}
+
+.enterbtn:hover {
+  background-color: #d53a33;
+  box-shadow: 0.75vmin 0.75vmin 0 #186dce, -0.75vmin -0.75vmin 0 #e79c10;
 }
 
 .focus {

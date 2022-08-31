@@ -12,6 +12,8 @@ import './App.css'
 import Home from "./pages/Home.js";
 import LoginPage from './pages/LoginPage.js';
 import Profile from "./pages/Profile.js";
+import Header from "./components/Header.js";
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -39,7 +41,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         {/* <div className="flex-column justify-flex-start h-100"> */}
-          <div className="centerContent">
+          <div className="entire">
             <Routes>
               <Route 
                 path="/" 
@@ -51,7 +53,7 @@ function App() {
                 />
               <Route
               path="/profile"
-              element={<Profile/>}
+              element={[<Header />, <Profile/>]}
               />
               <Route
               path="/me"
