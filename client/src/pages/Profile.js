@@ -16,7 +16,7 @@ const Profile = () => {
     variables: { userId: userId },
   });
 
-  const { scoreLoading, scoreData } = useQuery(QUERY_HIGHSCORES);
+  const { loading: scoreLoading, data: scoreData } = useQuery(QUERY_HIGHSCORES);
   const highscores = scoreData?.highscores || [];
 
   // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
@@ -36,27 +36,27 @@ const Profile = () => {
       <Navigate to="/login" />
     );
   }
-
+  
+  // the formatting of the title requires a variable to be inserted into the 
+  // HTML for the sake of rendering itself
   const title = "<SUFFER/>";
+
+  // loop to display the scores on the page
+  const showScores = () => {
+    let scoreList = [];
+    for (let i = 0; i < highscores.length; i++) {
+      scoreList.push(<ScoreRow position={i+1} name={highscores[i].user} score={highscores[i].score}/>);
+    }
+    return scoreList;
+  }
 
   return (
     <div class="wrapper text-white d-flex flex-column">
       <h1 class='p-5' id='scoreTitle'> {title} </h1>
       <p id="scoreSubTitle">HIGH SCORES</p>
       <table>
-        {() => {
-
-        }}
-        <ScoreRow position="1" name="Hunter" score="69420"/>
-        <ScoreRow position="2" name="Teagrin" score="707070"/>
-        <ScoreRow position="3" name="Charles" score="123456"/>
-        <ScoreRow position="4" name="Will" score="88844"/>
-        <ScoreRow position="5" name="Andy" score="34796"/>
-        <ScoreRow position="6" name="Tom" score="3412"/>
-        <ScoreRow position="7" name="John" score="3474"/>
-        <ScoreRow position="8" name="Michael" score="34701"/>
-        <ScoreRow position="9" name="Jack" score="3400"/>
-        <ScoreRow position="10" name="Jonny" score="34321"/>
+        {console.log(highscores)}
+        {showScores()}
       </table>
     </div>
   );

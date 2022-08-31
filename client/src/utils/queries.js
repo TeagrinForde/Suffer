@@ -33,6 +33,7 @@ export const QUERY_HIGHSCORES = gql`
     highscores {
       _id
       score
+      user
       createdAt
     }
   }
@@ -43,6 +44,7 @@ export const QUERY_SINGLE_HIGHSCORE = gql`
     highscore(highscoreId: $highscoreId) {
       _id
       score
+      user
       createdAt
     }
   }
