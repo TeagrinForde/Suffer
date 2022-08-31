@@ -16,7 +16,7 @@ const Profile = () => {
     variables: { userId: userId },
   });
 
-  const { loading: scoreLoading, data: scoreData } = useQuery(QUERY_HIGHSCORES);
+  const { data: scoreData } = useQuery(QUERY_HIGHSCORES);
   const highscores = scoreData?.highscores || [];
 
   // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
@@ -43,20 +43,34 @@ const Profile = () => {
 
   // loop to display the scores on the page
   const showScores = () => {
+    const sortedList = sortScores(highscores);
     let scoreList = [];
-    for (let i = 0; i < highscores.length; i++) {
-      scoreList.push(<ScoreRow position={i+1} name={highscores[i].user} score={highscores[i].score}/>);
+    for (let i = 0; i < sortedList.length; i++) {
+      scoreList.push(<ScoreRow key={i} position={i+1} name={sortedList[i].user} score={sortedList[i].score}/>);
     }
     return scoreList;
   }
 
+  function sortScores(scoreList) {
+    const shortList = scoreList.slice(0, 10);
+    shortList.sort(by);
+    return shortList;
+  }
+
+  function by(a, b) {
+    if (a.score > b.score) return -1;
+    else if (a.score < b.score) return 1;
+    else return 0;
+  }
+  
   return (
     <div class="wrapper text-white d-flex flex-column">
       <h1 class='p-5' id='scoreTitle'> {title} </h1>
       <p id="scoreSubTitle">HIGH SCORES</p>
       <table>
-        {console.log(highscores)}
+        <tbody>
         {showScores()}
+        </tbody>
       </table>
     </div>
   );
