@@ -31,7 +31,7 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, password: String!): Auth
     login(username: String!, password: String!): Auth
-    addHighscore(score: Int!): Highscore
+    addHighscore(score: Int!, user: String!): Highscore
   }
 `;
 
