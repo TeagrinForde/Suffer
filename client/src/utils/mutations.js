@@ -25,8 +25,8 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_HIGHSCORE = gql`
-  mutation addHighscore($score: Int!, $user: String!) {
-    addHighscore(score: $score, user: $user) {
+  mutation addHighscore($score: Int!) {
+    addHighscore(score: $score) {
       _id
       score
       createdAt
