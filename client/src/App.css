@@ -111,12 +111,12 @@ HOME
   width: 100vw;
 }
 
-@keyframes slide {
+@keyframes rotation {
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translate3d(0, -1500px, 0);
+    transform: rotate(359deg);
   }
 }
 
@@ -127,7 +127,7 @@ HOME
   width: 100vw;
   position: fixed;
   z-index: -1;
-  animation: slide 50s linear infinite;
+  animation: rotation 250s linear infinite;
 }
 
 #homeContainer {
@@ -352,12 +352,12 @@ login page
   min-width: 100vw;
 }
 
-@keyframes slide {
+@keyframes rotation {
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translate3d(0, -1500px, 0);
+    transform: rotate(359deg);
   }
 }
 
@@ -368,7 +368,7 @@ login page
   width: 100vw;
   position: fixed;
   z-index: -1;
-  animation: slide 50s linear infinite;
+  animation: rotation 250s linear infinite;
 }
 
 #loginContainer {
