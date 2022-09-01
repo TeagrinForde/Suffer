@@ -9,11 +9,15 @@ import PaddleHit from "../utils/PaddleHit";
 import PlayerStats from "../components/PlayerStats";
 import AllBroken from "../utils/AllBroke";
 import ResetBall from "../utils/ResetBall";
+import { useMutation } from '@apollo/client';
+import { ADD_HIGHSCORE } from '../utils/mutations.js';
 
 let bricks = [];
 let { ballObj, paddleProps, brickObj, player } = data;
+
 export default function Game() {
   const canvasRef = useRef(null);
+  const [addHighscore, { error, data: scoreData }] = useMutation(ADD_HIGHSCORE);
 
   useEffect(() => {
     const render = () => {
@@ -44,7 +48,6 @@ export default function Game() {
 
       if (player.lives === 0) {
         // save the score to the database
-        saveScore();
         renderEndScreen();
       }
       // Ball and Wall Collision
@@ -76,11 +79,14 @@ export default function Game() {
     };
     render();
   }, []);
-  
-  function saveScore() {
-
-  }
  
+  async function saveScore() {
+    const { data } = await addHighscore({
+      variables: {...player}
+    });
+    console.log(data);
+  }
+
   function renderEndScreen() {
     ballObj.dx = 0;
     ballObj.dy = 0;
@@ -89,8 +95,10 @@ export default function Game() {
   }
 
   function playAgain() {
+  saveScore();
     console.log('again');
       //  reset the game
+    data.brickObj.y = 50;
     player.lives = 5;
     player.level = 1;
     player.score = 0;
@@ -101,6 +109,7 @@ export default function Game() {
   }
 
   function stopPlaying() {
+    saveScore();
     return document.location.pathname='/profile';
   }
 
