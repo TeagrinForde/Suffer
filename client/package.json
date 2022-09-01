@@ -14,10 +14,10 @@
         "react-dom": "^17.0.1",
         "react-router-dom": "^6.2.1",
         "react-scripts": "4.0.1",
-        "react-typical": "^0.1.3",
         "web-vitals": "^0.2.4"
     },
     "scripts": {
+        "suffer": "npm i && npm i react-typical --legacy-peer-deps",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
