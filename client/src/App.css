@@ -398,3 +398,16 @@ login page
   background-color: rgba(158, 219, 237, 0.7);
 }
 
+.faded {
+  opacity: 0.1;
+}
+
+#buttonHolder {
+  position: absolute;
+  display: none;
+  left: 50vw;
+  top: 25vh;
+  transform: translateX(-6rem);
+  background-color: black;
+
+}

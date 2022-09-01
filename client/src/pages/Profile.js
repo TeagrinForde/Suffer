@@ -80,7 +80,7 @@ const Profile = () => {
       <h1 class='p-4' id='scoreTitle'> {title} </h1>
       <div class="row">
         <div class='col'>
-          <p className="scoreSubTitle" class="center">GLOBAL<br/>HIGH SCORES</p>
+          <p className="scoreSubTitle">GLOBAL<br/>HIGH SCORES</p>
           <table id='global' class='col-sm-8 col-lg-6 m-auto'>
             <tbody>
             {showGlobalScores()}

@@ -43,13 +43,9 @@ export default function Game() {
       AllBroken(bricks, player, canvas, ballObj);
 
       if (player.lives === 0) {
-        alert("Game Over! Press ok to restart");
-
-        player.lives = 5;
-        player.level = 1;
-        player.score = 0;
-        ResetBall(ballObj, canvas, paddleProps);
-        bricks.length = 0;
+        // save the score to the database
+        saveScore();
+        renderEndScreen();
       }
       // Ball and Wall Collision
       WallCollision(ballObj, canvas, player, paddleProps);
@@ -80,27 +76,60 @@ export default function Game() {
     };
     render();
   }, []);
+  
+  function saveScore() {
+
+  }
+ 
+  function renderEndScreen() {
+    ballObj.dx = 0;
+    ballObj.dy = 0;
+    document.getElementById('canvas').classList.add('faded');
+    document.getElementById('buttonHolder').setAttribute('style', 'display: inline');
+  }
+
+  function playAgain() {
+    console.log('again');
+      //  reset the game
+    player.lives = 5;
+    player.level = 1;
+    player.score = 0;
+    ResetBall(ballObj, canvasRef.current, paddleProps);
+    bricks.length = 0;
+    document.getElementById('canvas').classList.remove('faded');
+    document.getElementById('buttonHolder').setAttribute('style', 'display: none');
+  }
+
+  function stopPlaying() {
+    return document.location.pathname='/profile';
+  }
 
   return (
     <div style={{ textAlign: "center" }}>
       <h1 className="gameHeader">Suffer Game</h1>
-      <canvas
-        id="canvas"
-        ref={canvasRef}
-        onMouseMove={(event) =>
-          (paddleProps.x =
-            event.clientX -
-            (window.innerWidth < 900 ? 10 : (window.innerWidth * 20) / 200) -
-            paddleProps.width / 2 -
-            10)
-        }
-        height="500"
-        width={
-          window.innerWidth < 900
-            ? window.innerWidth - 20
-            : window.innerWidth - (window.innerWidth * 20) / 100
-        }
-      />
+        <div id="endScreen">
+          <canvas
+            id="canvas"
+            ref={canvasRef}
+            onMouseMove={(event) =>
+              (paddleProps.x =
+                event.clientX -
+                (window.innerWidth < 900 ? 10 : (window.innerWidth * 20) / 200) -
+                paddleProps.width / 2 -
+                10)
+            }
+            height="500"
+            width={
+              window.innerWidth < 900
+                ? window.innerWidth - 20
+                : window.innerWidth - (window.innerWidth * 20) / 100
+            }
+          />
+          <div id='buttonHolder'>
+            <button onClick={playAgain}>Play Again</button>
+            <button onClick={stopPlaying}>I'm Done</button>
+          </div>
+        </div>
     </div>
   );
 }
