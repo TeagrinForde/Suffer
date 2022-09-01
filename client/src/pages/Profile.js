@@ -46,7 +46,7 @@ const Profile = () => {
   const username = profile.username;
 
   // loop to display the scores on the page
-  const showScores = () => {
+  const showGlobalScores = () => {
     const sortedList = sortScores(highscores);
     let scoreList = [];
     for (let i = 0; i < sortedList.length; i++) {
@@ -68,18 +68,34 @@ const Profile = () => {
     else return 0;
   }
   
+  const showLocalScores = () => {
+    let scoreList = [];
+    return scoreList;
+  }
+
   return (
     <div class="wrapper text-white d-flex flex-column p-2">
       <p class='d-flex pt-1 pl-1' id='welcome'>Welcome {username}</p>
       < Directions />
       <h1 class='p-4' id='scoreTitle'> {title} </h1>
-      
-      <p id="scoreSubTitle">HIGH SCORES</p>
-      <table class='col-sm-8 col-lg-5'>
-        <tbody>
-        {showScores()}
-        </tbody>
-      </table>
+      <div class="row">
+        <div class='col'>
+          <p className="scoreSubTitle" class="center">GLOBAL<br/>HIGH SCORES</p>
+          <table id='global' class='col-sm-8 col-lg-6 m-auto'>
+            <tbody>
+            {showGlobalScores()}
+            </tbody>
+          </table>
+        </div>
+        <div class='col'>
+          <p className="scoreSubTitle">LOCAL<br/>HIGH SCORES</p>
+          <table id='local' class='col-sm-8 col-lg-6 m-auto'>
+            <tbody>
+            {showLocalScores()}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };
