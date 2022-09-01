@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../App.css";
 import { Navigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
@@ -68,13 +68,13 @@ const Profile = () => {
   }
   
   return (
-    <div class="wrapper text-white d-flex flex-column p-3">
-      <p class='d-flex justify-content-start' id='welcome'>Welcome {username}</p>
+    <div class="wrapper text-white d-flex flex-column p-2">
+      <p class='d-flex pt-1 pl-1' id='welcome'>Welcome {username}</p>
       < Directions />
-      <h1 class='p-5' id='scoreTitle'> {title} </h1>
+      <h1 class='p-4' id='scoreTitle'> {title} </h1>
       
       <p id="scoreSubTitle">HIGH SCORES</p>
-      <table>
+      <table class='col-sm-8 col-lg-5'>
         <tbody>
         {showScores()}
         </tbody>
