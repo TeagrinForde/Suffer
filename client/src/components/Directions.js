@@ -6,7 +6,7 @@ export default function Directions() {
 
   return (
     <div className="container p-3" id='directions'>
-      <h6>{message}</h6>
+      <p>{message}</p>
     </div>
   );
 }
