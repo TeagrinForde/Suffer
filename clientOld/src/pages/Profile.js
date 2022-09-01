@@ -1,10 +1,11 @@
 import React from "react";
-
+import "../App.css";
 import { Navigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
 import { QUERY_SINGLE_USER, QUERY_ME, QUERY_HIGHSCORES } from "../utils/queries";
 import ScoreRow from "../components/ScoreRow";
+import Directions from "../components/Directions";
 
 import Auth from "../utils/auth";
 
@@ -41,6 +42,9 @@ const Profile = () => {
   // HTML for the sake of rendering itself
   const title = "<SUFFER/>";
 
+  //username variable from profile
+  const username = profile.username;
+
   // loop to display the scores on the page
   const showScores = () => {
     const sortedList = sortScores(highscores);
@@ -64,10 +68,13 @@ const Profile = () => {
   }
   
   return (
-    <div class="wrapper text-white d-flex flex-column">
-      <h1 class='p-5' id='scoreTitle'> {title} </h1>
+    <div class="wrapper text-white d-flex flex-column p-2">
+      <p class='d-flex pt-1 pl-1' id='welcome'>Welcome {username}</p>
+      < Directions />
+      <h1 class='p-4' id='scoreTitle'> {title} </h1>
+      
       <p id="scoreSubTitle">HIGH SCORES</p>
-      <table>
+      <table class='col-sm-8 col-lg-5'>
         <tbody>
         {showScores()}
         </tbody>
