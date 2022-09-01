@@ -390,3 +390,10 @@ login page
 .focus {
   background-color: #e79c10;
 }
+
+/*******Game******/
+
+#canvas {
+  background-color: rgba(158, 219, 237, 0.7);
+}
+
