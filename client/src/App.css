@@ -18,7 +18,7 @@ body {
 #navContainer {
   font-family: "Press Start 2P", cursive;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   position: fixed;
   margin-left: auto;
   margin-right: auto;

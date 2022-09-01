@@ -56,9 +56,10 @@ const Profile = () => {
   }
 
   function sortScores(scoreList) {
-    const shortList = scoreList.slice(0, 10);
-    shortList.sort(by);
-    return shortList;
+    const shortList = scoreList.slice();
+    shortList.sort(by)
+    console.log(shortList);
+    return shortList.slice(0, 10);
   }
 
   function by(a, b) {

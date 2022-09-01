@@ -1,0 +1,36 @@
+/* body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+} */
+:root {
+    --width: 88.88vh
+}
+
+#gameScreen {
+    position: relative;
+    border: 0.125rem solid white;
+    width: var(--width);
+    height: calc(var(--width)*9/16);
+    background-color: black;
+}
+
+#wholeScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-color: gray
+}
+
+#scoreBoard {
+    position: absolute;
+    z-index: 5;
+    color: white;
+    left: 0.625rem;
+    top: 0.625rem;
+    margin: 0;
+}
