@@ -135,8 +135,8 @@ export default function Game() {
             }
           />
           <div id='buttonHolder'>
-            <button onClick={playAgain}>Play Again</button>
-            <button onClick={stopPlaying}>I'm Done</button>
+            <button id="playAgain" onClick={playAgain}>Play Again</button>
+            <button id="done" onClick={stopPlaying}>I'm Done</button>
           </div>
         </div>
     </div>
