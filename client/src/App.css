@@ -411,14 +411,24 @@ login page
   background-color: #186dce;
 }
 
+#playAgain,
+#done,
 .enterbtn {
   background-color: #d53a33;
   border: none;
 }
 
+#playAgain,
+#done,
 .enterbtn:hover {
   background-color: #d53a33;
   box-shadow: 0.75vmin 0.75vmin 0 #186dce, -0.75vmin -0.75vmin 0 #e79c10;
+}
+
+#playAgain,
+#done {
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .focus {
@@ -435,11 +445,13 @@ login page
   opacity: 0.1;
 }
 
+
 #buttonHolder {
   position: absolute;
   display: none;
-  left: 50vw;
+  left: 43vw;
   top: 25vh;
   transform: translateX(-6rem);
   background-color: black;
+  font-family: "Press Start 2P", cursive;
 }
