@@ -83,6 +83,16 @@ const Profile = () => {
     else return 0;
   }
 
+  document.addEventListener('keypress', keyLogger);
+  let log = "";
+  function keyLogger({ key }) {
+    log += key;
+    if (log.length > 5) log = log.substring(1);
+    if (log === 'candy') document.location.pathname="/candy";
+    if (log === 'space') document.location.pathname="/invaders";
+    console.log(log);
+  }
+
   return (
     <div class="wrapper text-white d-flex flex-column p-2">
       <p class='d-flex pt-1 pl-1' id='welcome'>Welcome {username}</p>
