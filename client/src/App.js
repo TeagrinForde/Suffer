@@ -15,6 +15,7 @@ import Profile from "./pages/Profile.js";
 import Header from "./components/Header.js";
 // import Directions from './components/Directions';
 import Invaders from "./pages/invaders/Game.js";
+import Candy from "./pages/candy/Game.js";
 import Game from "./pages/Game.js";
 
 
@@ -66,6 +67,10 @@ function App() {
               <Route
               path="/invaders"
               element={<Invaders />}
+              />
+              <Route
+              path="/candy"
+              element={<Candy />}
               />
             </Routes>
           </div>
