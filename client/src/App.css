@@ -111,13 +111,16 @@ HOME
   width: 100vw;
 }
 
+#scoreTitle,
 #homeTitle {
+  font-family: "Press Start 2P", cursive;
   font-size: 100px;
   color: #186dce;
   text-shadow: 0.5vmin 0.5vmin 0 #e79c10, -0.5vmin -0.5vmin 0 #d53a33;
 }
 
 @media screen and (max-width: 960px) {
+  #scoreTitle,
   #homeTitle {
     transition: 0.8s all ease;
     font-size: 50px;
@@ -126,6 +129,7 @@ HOME
 }
 
 @media screen and (max-width: 520px) {
+  #scoreTitle,
   #homeTitle {
     transition: 0.8s all ease;
     font-size: 40px;
@@ -165,13 +169,6 @@ profile / highscore page
 
 ************************************************************************/
 
-#scoreTitle {
-  font-family: "Press Start 2P", cursive;
-  font-size: 90px;
-  color: rgb(0, 119, 255);
-  text-shadow: 0.5vmin 0.5vmin 0 #e79c10, -0.5vmin -0.5vmin 0 #d53a33;
-}
-
 #scoreSubTitle {
   font-family: "Press Start 2P", cursive;
   font-size: 30px;
@@ -183,6 +180,7 @@ profile / highscore page
   color: rgb(255, 255, 255);
   text-align: center;
   padding-top: 70px;
+  padding-bottom: 30px;
 }
 
 #welcome {
