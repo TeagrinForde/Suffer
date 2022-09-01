@@ -15,8 +15,6 @@ export default {
     colors: ["red", "blue"],
   },
   player: {
-    name: "Will", //this is where we can insert username
-
     lives: 5,
     score: 0,
     level: 1,

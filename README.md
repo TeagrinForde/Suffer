@@ -20,7 +20,7 @@
 
   ## Usage
 
-  Once dependencies and database is installed, run ```npm run develop``` in the terminal and follow route or use the url: https://suffer-game-gtbootcamp.herokuapp.com/login
+  Once dependencies and database is installed, run ```npm run develop``` in the terminal and follow route or use the url: https://suffer-game-gtbootcamp.herokuapp.com/
  
   ## Contribution Guidelines
 
