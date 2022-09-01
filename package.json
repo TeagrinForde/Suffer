@@ -6,7 +6,7 @@
     "scripts": {
         "start": "node server --ignore client",
         "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
-        "install": "cd server && npm i && cd ../client && npm i",
+        "install": "cd server && npm i && cd ../client && npm run suffer",
         "seed": "cd server && npm run seed",
         "build": "cd client && npm run build"
     },
@@ -15,8 +15,5 @@
     "license": "ISC",
     "devDependencies": {
         "concurrently": "^5.1.0"
-    },
-    "dependencies": {
-        "react-typical": "^0.1.3"
     }
 }
