@@ -1,14 +1,11 @@
-* {
-  box-sizing: border-box;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap");
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #000000ee;
-  max-width: 100%;
-  overflow-x: hidden;
+  background: rgb(244,55,17);
+background: linear-gradient(180deg, rgba(244,55,17,1) 0%, rgba(228,206,31,1) 50%, rgba(58,112,210,1) 100%);
 }
+<<<<<<< HEAD
+.App {
+=======
 
 :root {
   --bright-green: #00ff41;
@@ -111,44 +108,15 @@ HOME
   width: 100vw;
 }
 
-@keyframes slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, -1500px, 0);
-  }
-}
-
-#starmove {
-  background-image: url("./img/starsOne.png");
-  /* background-repeat: repeat; */
-  min-height: 100000px;
-  width: 100vw;
-  position: fixed;
-  z-index: -1;
-  animation: slide 50s linear infinite;
-}
-
-#homeContainer {
-  background-color: #121212;
-  color: #f5f5f5;
-  font-family: "Press Start 2P", cursive;
-  /* text-align: center; */
-  min-height: 100vh;
-  width: 100vw;
-  position: fixed;
-  left: 0;
-  right: 0;
-}
-
 #homeTitle {
+  font-family: "Press Start 2P", cursive;
   font-size: 100px;
   color: #186dce;
   text-shadow: 0.5vmin 0.5vmin 0 #e79c10, -0.5vmin -0.5vmin 0 #d53a33;
 }
 
 @media screen and (max-width: 960px) {
+  #scoreTitle,
   #homeTitle {
     transition: 0.8s all ease;
     font-size: 50px;
@@ -157,6 +125,7 @@ HOME
 }
 
 @media screen and (max-width: 520px) {
+  #scoreTitle,
   #homeTitle {
     transition: 0.8s all ease;
     font-size: 40px;
@@ -283,6 +252,7 @@ table {
   font-size: 17px;
   border-radius: 10px;
   border-spacing: 0;
+>>>>>>> e202a96326c4a4826bf60d7984e645e42e7ae0fd
   text-align: center;
   background-color: red;
   background-image: linear-gradient(
@@ -320,73 +290,52 @@ table {
   }
 }
 
+<<<<<<< HEAD
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+=======
 td {
   padding: 7px 20px;
-  background: none;
-  color: rgba(28, 183, 204, 0.6);
+>>>>>>> e202a96326c4a4826bf60d7984e645e42e7ae0fd
 }
 
-tr:last-child td:first-child {
-  border-radius: 0 0 0 5px;
-}
-tr:last-child td:last-child {
-  border-radius: 0 0 5px 0;
-}
-tr td:last-child {
-  border-right: none;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-/**********************************************************************
-
-login page
-
-************************************************************************/
-
-#loginContainer {
-  background-color: #121212;
-  /* color: white; */
-  font-family: "Press Start 2P", cursive;
-  /* text-align: center; */
+.App-header {
+  background-color: #282c34;
   min-height: 100vh;
-  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.logSignBtns {
-  font-size: 25px;
+.App-link {
+  color: #61dafb;
 }
 
-@media screen and (max-width: 420px) {
-  .form-input {
-    transition: 0.8s all ease;
-    font-size: 14px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
-@media screen and (max-width: 960px) {
-  .card-header {
-    transition: 0.8s all ease;
-    text-align: center;
-  }
+#canvas {
+  background-color: rgba(158, 219, 237, 0.7);
 }
 
-.enterCard {
-  background-color: transparent;
-}
-
-.enterTitle {
-  background-color: #186dce;
-}
-
-.enterbtn {
-  background-color: #d53a33;
-  border: none;
-}
-
-.enterbtn:hover {
-  background-color: #d53a33;
-  box-shadow: 0.75vmin 0.75vmin 0 #186dce, -0.75vmin -0.75vmin 0 #e79c10;
-}
-
-.focus {
-  background-color: #e79c10;
+.gameHeader {
+  font-family: "Sedgwick Ave", cursive;
+  color: white;
+  font-size: 50px;
 }
