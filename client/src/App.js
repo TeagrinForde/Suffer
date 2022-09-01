@@ -13,6 +13,8 @@ import Home from "./pages/Home.js";
 import LoginPage from './pages/LoginPage.js';
 import Profile from "./pages/Profile.js";
 import Header from "./components/Header.js";
+// import Directions from './components/Directions';
+import Invaders from "./pages/invaders/Game.js";
 import Game from "./pages/Game.js";
 
 
@@ -60,6 +62,10 @@ function App() {
               <Route
               path="/game"
               element={<Game/>}
+              />
+              <Route
+              path="/invaders"
+              element={<Invaders />}
               />
             </Routes>
           </div>

@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 import Auth from "../utils/auth";
 import React from "react";
-import Profile from "../pages/Profile";
 
 const Header = () => {
   const logout = (event) => {
