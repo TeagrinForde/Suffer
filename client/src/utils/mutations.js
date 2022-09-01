@@ -25,11 +25,12 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_HIGHSCORE = gql`
-  mutation addSkill($profileId: ID!, $skill: String!) {
-    addSkill(profileId: $profileId, skill: $skill) {
+  mutation addHighscore($score: Int!, $user: String!) {
+    addHighscore(score: $score, user: $user) {
       _id
-      name
-      skills
+      score
+      createdAt
+      user
     }
   }
 `;

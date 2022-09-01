@@ -18,11 +18,11 @@ const Header = () => {
           class="nav md p-1"
           id="navContainer"
         >
-          {/* <li class="nav-item">
-            <Link to="/profile" class="nav-link" id="navText">
-              Menu
+          <li class="nav-item">
+            <Link to="/game" class="nav-link" id="navText">
+              Play
             </Link>
-          </li> */}
+          </li>
           <li class="nav-item">
             <Link to="" class="nav-link" onClick={logout} id="navText">
               Logout

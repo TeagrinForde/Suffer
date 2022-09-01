@@ -48,19 +48,19 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addHighscore: async (parent, { score }, context) => {
-      // console.log(context.user);
+    addHighscore: async (parent, { score, user }, context) => {
+      console.log(context.user);
       if (context.user) {
-        const highscore = await Highscore.create({
-          score
+        const highscore = await Highscore.create({ score,
+          user: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { highscore: highscore._id } }
+          { $addToSet: { highscores: highscore._id } }
         );
 
-        return highscore;
+        return {highscore};
       }
       throw new AuthenticationError('You need to be logged in!');
     },

@@ -352,6 +352,39 @@ login page
   min-width: 100vw;
 }
 
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -1500px, 0);
+  }
+}
+
+#starmove {
+  background-image: url("./img/starsOne.png");
+  /* background-repeat: repeat; */
+  min-height: 100000px;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+  animation: slide 50s linear infinite;
+}
+
+#loginContainer {
+  background-color: #121212;
+  /* color: white; */
+  font-family: "Press Start 2P", cursive;
+  /* text-align: center; */
+  /* min-height: 100vh; */
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
 .logSignBtns {
   font-size: 25px;
 }
@@ -409,5 +442,4 @@ login page
   top: 25vh;
   transform: translateX(-6rem);
   background-color: black;
-
 }
