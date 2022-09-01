@@ -1,5 +1,5 @@
-import ship from '../../img/ship.png'
-import '../../style/Player.css'
+import ship from '../ship.png';
+import '../Player.css'
 
 export default function Player({ position }) {
 

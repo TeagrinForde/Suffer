@@ -1,15 +1,15 @@
 import React, { useState, useRef } from 'react';
-import '../style/Game.css';
+import './Game.css';
 
-import Player from '../components/game/Player.js'
+import Player from './parts/Player.js'
 
-function Game() {
+function Invaders() {
     const [position, setPosition] = useState(44.22);
     const speed = useRef(0)
     const shotFired = useRef(false);
     const intervalRef = useRef(null);
 
-    function handleKeyPress({ key }) {
+    function handleKeyDown({ key }) {
 
         switch(key) {
             case 'a':
@@ -79,7 +79,7 @@ function Game() {
     }
 
     return (
-    <div id="wholeScreen" tabIndex={0} onKeyPress={handleKeyPress} onKeyUp={handleKeyUp}>
+    <div id="wholeScreen" tabIndex={0} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}>
         <p id='scoreBoard'>
             <span>Score:</span> <span id="scoreEl">0</span> 
         </p>
@@ -91,4 +91,4 @@ function Game() {
     )
 }
 
-export default Game;
+export default Invaders;

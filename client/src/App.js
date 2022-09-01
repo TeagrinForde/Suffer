@@ -14,7 +14,7 @@ import LoginPage from './pages/LoginPage.js';
 import Profile from "./pages/Profile.js";
 import Header from "./components/Header.js";
 // import Directions from './components/Directions';
-import Game from "./pages/Game.js";
+import Invaders from "./pages/invaders/Game.js";
 
 
 const httpLink = createHttpLink({
@@ -63,8 +63,8 @@ function App() {
               element={<Profile/>}
               />
               <Route
-              path="/play"
-              element={<Game />}
+              path="/invaders"
+              element={<Invaders />}
               />
             </Routes>
           </div>
