@@ -15,6 +15,7 @@ import Profile from "./pages/Profile.js";
 import Header from "./components/Header.js";
 // import Directions from './components/Directions';
 import Invaders from "./pages/invaders/Game.js";
+import Game from "./pages/Game.js";
 
 
 const httpLink = createHttpLink({
@@ -59,8 +60,8 @@ function App() {
               element={[<Header />, <Profile/>]}
               />
               <Route
-              path="/me"
-              element={<Profile/>}
+              path="/game"
+              element={<Game/>}
               />
               <Route
               path="/invaders"

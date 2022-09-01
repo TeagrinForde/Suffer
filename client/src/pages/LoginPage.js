@@ -33,6 +33,7 @@ function LoginPage() {
       class="d-flex flex-column justify-content-center align-items-center"
       id="loginContainer"
     >
+      <div id='starmove'></div>
       <div id="loginFormContainer" class="">
         <button class="logSignBtns" id="login" onClick={() => setTab("login")}>
           Login
