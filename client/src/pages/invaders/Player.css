@@ -1,0 +1,7 @@
+#ship {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 44vh;
+    transform: translateX(-1.5rem)
+}

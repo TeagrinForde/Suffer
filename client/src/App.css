@@ -18,7 +18,7 @@ body {
 #navContainer {
   font-family: "Press Start 2P", cursive;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   position: fixed;
   margin-left: auto;
   margin-right: auto;
@@ -219,14 +219,15 @@ profile / highscore page
   }
 }
 
-#scoreSubTitle {
+.scoreSubTitle {
   font-family: "Press Start 2P", cursive;
   font-size: 30px;
   color: #f5f5f5;
+  text-align: center;
 }
 
 @media screen and (max-width: 520px) {
-  #scoreSubTitle {
+  .scoreSubTitle {
     transition: 0.8s all ease;
     font-size: 20px;
     text-align: center;
@@ -397,3 +398,16 @@ login page
   background-color: rgba(158, 219, 237, 0.7);
 }
 
+.faded {
+  opacity: 0.1;
+}
+
+#buttonHolder {
+  position: absolute;
+  display: none;
+  left: 50vw;
+  top: 25vh;
+  transform: translateX(-6rem);
+  background-color: black;
+
+}
