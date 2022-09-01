@@ -55,7 +55,7 @@ function App() {
                 />
               <Route
               path="/profile"
-              element={[<Header />, <Directions/>, <Profile/>]}
+              element={[<Header />, <Profile/>]}
               />
               <Route
               path="/me"

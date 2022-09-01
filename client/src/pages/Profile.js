@@ -5,6 +5,7 @@ import { useQuery } from "@apollo/client";
 
 import { QUERY_SINGLE_USER, QUERY_ME, QUERY_HIGHSCORES } from "../utils/queries";
 import ScoreRow from "../components/ScoreRow";
+import Directions from "../components/Directions";
 
 import Auth from "../utils/auth";
 
@@ -67,9 +68,11 @@ const Profile = () => {
   }
   
   return (
-    <div class="wrapper text-white d-flex flex-column">
-      <h1 class='p-1' id='scoreTitle'> {title} </h1>
-      <p id='welcome'>Welcome {username}</p>
+    <div class="wrapper text-white d-flex flex-column p-3">
+      <p class='d-flex justify-content-start' id='welcome'>Welcome {username}</p>
+      < Directions />
+      <h1 class='p-5' id='scoreTitle'> {title} </h1>
+      
       <p id="scoreSubTitle">HIGH SCORES</p>
       <table>
         <tbody>
