@@ -10,18 +10,7 @@ import blank from "../../img/blank.png";
 import mary from "../../img/Mary.png";
 
 const width = 8;
-<<<<<<< Updated upstream
-const candyColors = [
-  jung,
-  blueGirl,
-  travis,
-  sally,
-  Donnie,
-  mary
-];
-=======
 const candyColors = [jung, blueGirl, travis, sally, Donnie, mary];
->>>>>>> Stashed changes
 
 const Game = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
