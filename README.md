@@ -12,7 +12,7 @@ A web developer's version of space invaders. Make your way though each level of 
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contribution](#contribution)
+- [Contribution and Attribution](#Contribution_and_Attribution)
 - [Test Instructions](#test)
 - [Questions](#questions)
 
@@ -24,7 +24,7 @@ To install all dependencies, open your VS terminal at the root folder and run `n
 
 Once dependencies and database is installed, run `npm run develop` in the terminal and follow route or use the url: https://suffer-game-gtbootcamp.herokuapp.com/
 
-## Contribution
+## Contribution and Attribution
 
 Teagrin Forde and Hunter Padgett created the back-end database and file structure. Will Summerlin incorporated logic and game functionality and Charles Morton utilized REACT-Bootstrap front-end languages to created a smooth UI/UX design.
 
@@ -40,6 +40,9 @@ YouTube tutorials that gave us inspiration for games and easter eggs:<br>
 <a href='https://www.youtube.com/watch?v=MCVU0w73uKI'> YouTube video by Chris Courses
 
 - https://www.youtube.com/c/ChrisCourses</a>
+
+Image attribution:<br>
+Star Image By 30000005106 From <a href="https://lovepik.com/image-400210721/stars.html">LovePik.com</a>
 
 ## Test Instructions
 
