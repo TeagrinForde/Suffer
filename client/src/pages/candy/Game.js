@@ -5,7 +5,7 @@ import jung from "../../img/Jung.png";
 import blueGirl from "../../img/blueGirl.png";
 import travis from "../../img/Travis.png";
 import sally from "../../img/Sally.png";
-import batGirl from "../../img/batGirl.png";
+import Donnie from "../../img/Donnie.png";
 import blank from "../../img/blank.png";
 import mary from "../../img/Mary.png"
 
@@ -15,7 +15,7 @@ const candyColors = [
   blueGirl,
   travis,
   sally,
-  batGirl,
+  Donnie,
   mary
 ];
 
