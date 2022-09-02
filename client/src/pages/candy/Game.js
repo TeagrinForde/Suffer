@@ -7,9 +7,10 @@ import travis from "../../img/Travis.png";
 import sally from "../../img/Sally.png";
 import batGirl from "../../img/batGirl.png";
 import blank from "../../img/blank.png";
-import mary from "../../img/Mary.png"
+import mary from "../../img/Mary.png";
 
 const width = 8;
+<<<<<<< Updated upstream
 const candyColors = [
   jung,
   blueGirl,
@@ -18,6 +19,9 @@ const candyColors = [
   batGirl,
   mary
 ];
+=======
+const candyColors = [jung, blueGirl, travis, sally, Donnie, mary];
+>>>>>>> Stashed changes
 
 const Game = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
@@ -219,27 +223,57 @@ const Game = () => {
     currentColorArrangement,
   ]);
 
+  const message = "Thank you for helping us suffer :)";
+
   return (
-    <div className="candyContainer d-flex justify-content-center align-items-center">
+    <div className="candyContainer d-flex justify-content-around align-items-center">
       <div id="candystarmove"></div>
-      <div className="candyGame">
-        {currentColorArrangement.map((candyColor, index) => (
-          <img
-            key={index}
-            src={candyColor}
-            alt={candyColor}
-            data-id={index}
-            draggable={true}
-            onDragStart={dragStart}
-            onDragOver={(e) => e.preventDefault()}
-            onDragEnter={(e) => e.preventDefault()}
-            onDragLeave={(e) => e.preventDefault()}
-            onDrop={dragDrop}
-            onDragEnd={dragEnd}
-          />
-        ))}
+      <div className="taContainer d-flex row col-lg-2 col-sm-12">
+        <ul className="row d-flex justify-content-center p-3">
+          <div>
+            <img class="ta" src={jung} alt="jung" />
+            <p className="text-center">jung</p>
+          </div>
+          <div>
+            <img class="ta" src={travis} alt="travis" />
+            <p className="text-center">travis</p>
+          </div>
+          <div>
+            <img class="ta" src={mary} alt="mary" />
+            <p className="text-center">mary</p>
+          </div>
+          <div>
+            <img class="ta" src={sally} alt="sally" />
+            <p className="text-center">sally</p>
+          </div>
+          <div>
+            <img class="ta" src={Donnie} alt="donnie" />
+            <p className="text-center">donnie</p>
+          </div>
+          <p className="text-center">{message}</p>
+        </ul>
       </div>
-      <ScoreBoard score={scoreDisplay} />
+      <div className="d-flex row justify-content-center col-lg-6 col-sm-12">
+        <div className="candyGame justify-content-center">
+          {currentColorArrangement.map((candyColor, index) => (
+            <img
+              key={index}
+              src={candyColor}
+              alt={candyColor}
+              data-id={index}
+              draggable={true}
+              onDragStart={dragStart}
+              onDragOver={(e) => e.preventDefault()}
+              onDragEnter={(e) => e.preventDefault()}
+              onDragLeave={(e) => e.preventDefault()}
+              onDrop={dragDrop}
+              onDragEnd={dragEnd}
+            />
+          ))}
+          <ScoreBoard score={scoreDisplay} />
+        </div>
+      </div>
+      <div></div>
     </div>
   );
 };

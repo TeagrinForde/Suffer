@@ -543,13 +543,32 @@ candy
 }
 
 .candyGame {
-  width: 560px;
-  height: 560px;
+  width: 580px;
+  height: 580px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.taContainer {
+  background-color: #f5f5f5;
+  color: #121212;
+  height: 560px;
+  padding: none;
+  margin: none;
 }
 
 .candyGame img {
   width: 70px;
   height: 70px;
+}
+
+.taContainer ul img {
+  width: 100px !important;
+  height: 100px;
+  padding: none;
+  margin: none;
+}
+
+.taContainer ul p {
+  font-family: "Press Start 2P", cursive;
 }
