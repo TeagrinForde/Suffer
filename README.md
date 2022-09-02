@@ -5,6 +5,8 @@
   ## Description
 
   A web developer's version of space invaders. Make your way though each level of code to earn status and make MVP! 
+  
+  ![image](https://user-images.githubusercontent.com/101753839/188037835-2c6e7e51-4ee9-4519-9223-a8a4fdc97264.png)
 
   ## Table of Contents
 
