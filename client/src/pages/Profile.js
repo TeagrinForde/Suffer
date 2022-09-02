@@ -94,22 +94,22 @@ const Profile = () => {
   }
 
   return (
-    <div class="wrapper text-white d-flex flex-column p-2">
-      <p class='d-flex pt-1 pl-1' id='welcome'>Welcome {username}</p>
+    <div class="container wrapper text-white d-flex flex-column p-2">
+      <p class='d-flex justify-content-start ml-5 pl-2 pt-3' id='welcome'>Welcome {username}</p>
       < Directions />
       <h1 class='p-4' id='scoreTitle'> {title} </h1>
       <div class="row" style={{width: '75vw'}}>
-        <div class='col'>
+        <div class='d-flex row justify-content-center col-lg-6 col-sm-12 p-2'>
           <p className="scoreSubTitle">GLOBAL<br/>HIGH SCORES</p>
-          <table id='global' class='col-sm-8 col-lg-9 m-auto'>
+          <table id='global' class='col-sm-12 col-lg-9 '>
             <tbody>
             {showGlobalScores()}
             </tbody>
           </table>
         </div>
-        <div class='col'>
-          <p className="scoreSubTitle">LOCAL<br/>HIGH SCORES</p>
-          <table id='local' class='col-sm-8 col-lg-9 m-auto'>
+        <div class='d-flex row justify-content-center col-lg-6 col-sm-12 p-2'>
+          <p className="scoreSubTitle ">LOCAL<br/>HIGH SCORES</p>
+          <table id='local' class='col-sm-12 col-lg-9 '>
             <tbody>
             {showLocalScores()}
             </tbody>
