@@ -27,7 +27,7 @@ Once dependencies and database is installed, run `npm run develop` in the termin
 
 ## Contribution and Attribution
 
-Working in an Agile framework and utilizing our project's Kanban board organized by Teagrin Forde. Teagrin created the framework and file structure. Charles Morton and Hunter Padgett created the back-end database using MongoDB and Mongoose. Will Summerlin incorporated logic and game functionality for the Breakout and space-invaders extension. Teagrin and Hunter collaborated to ensure functioning authorization and authentication through JWT as well as smooth UI/UX responsive design. Charles and Hunter also worked together to implement state management and CRUD routes in React. 
+Agile project methodology, utilizing a Kanban board organized by Teagrin Forde. Teagrin also created the framework and file structure. Charles Morton and Hunter Padgett created the back-end database using MongoDB and Mongoose. Will Summerlin incorporated logic and game functionality for the Breakout and space-invaders extension. Teagrin and Hunter collaborated to ensure functioning authorization and authentication through JWT as well as smooth UI/UX responsive design. Charles and Hunter also worked together to implement state management and CRUD routes in React. 
 
 YouTube tutorials that gave us inspiration for games and easter eggs:<br>
 <a href='https://www.youtube.com/watch?v=PBrEq9Wd6_U'> YouTube video by Ania Kubów
@@ -58,6 +58,6 @@ If you have any additional questions, please contact me directly at: TeagrinB@gm
 
 ## Thanks
 
-Special thanks to our incredible instructor Junghoon Yoon and TAs Donald "Donnie" Cook, Travis Cook, Mary Prince, and Sally Zhang. We appreciate all of your help and support to get to where we are.
+Special thanks to our incredible instructor Junghoon Yoon and TAs Donald "Donnie" Cook, Travis Cook, Mary Prince, and Sally Zhang. We appreciate all of your help and support to get us to where we are.
 
 
