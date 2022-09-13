@@ -4,7 +4,7 @@
 
 ## Description
 
-A web developer's version of space invaders. Make your way though each level of code to earn status and make MVP!
+A web developer's version of Breakout arcade video game developed and published by Atari, Inc. and released in 1976. Break your way though each level of code to earn MVP status! Once in the scoreboard room, type in "candy" or "space" to access additional games created to reflect our development throughout the past three months at the Gerogia Institute of Technology Full-Stack Development Bootcamp.
 
 ![image](https://user-images.githubusercontent.com/101753839/188037835-2c6e7e51-4ee9-4519-9223-a8a4fdc97264.png)
 
@@ -15,6 +15,7 @@ A web developer's version of space invaders. Make your way though each level of 
 - [Contribution and Attribution](#Contribution_and_Attribution)
 - [Test Instructions](#test)
 - [Questions](#questions)
+- [Special Thanks](#thanks)
 
 ## Installation
 
@@ -26,7 +27,7 @@ Once dependencies and database is installed, run `npm run develop` in the termin
 
 ## Contribution and Attribution
 
-Teagrin Forde and Hunter Padgett created the back-end database and file structure. Will Summerlin incorporated logic and game functionality and Charles Morton utilized REACT-Bootstrap front-end languages to created a smooth UI/UX design.
+Working in an Agile framework and utilizing our project's Kanban board organized by Teagrin Forde. Teagrin created the framework and file structure. Charles Morton and Hunter Padgett created the back-end database using MongoDB and Mongoose. Will Summerlin incorporated logic and game functionality for the Breakout and space-invaders extension. Teagrin and Hunter collaborated to ensure functioning authorization and authentication through JWT as well as smooth UI/UX responsive design. Charles and Hunter also worked together to implement state management and CRUD routes in React. 
 
 YouTube tutorials that gave us inspiration for games and easter eggs:<br>
 <a href='https://www.youtube.com/watch?v=PBrEq9Wd6_U'> YouTube video by Ania Kubów
@@ -53,3 +54,10 @@ This project does not include any tests.
 If you would like to see more of our work, checkout our GitHub repositories under the user names: `TeagrinForde`, `HunterPadgett`, `dubsumm`, and `Alkarias`.
 <br>
 If you have any additional questions, please contact me directly at: TeagrinB@gmail.com
+
+
+## Thanks
+
+Special thanks to our incredible instructor Junghoon Yoon and TAs Donald "Donnie" Cook, Travis Cook, Mary Prince, and Sally Zhang. We appreciate all of your help and support to get to where we are.
+
+
