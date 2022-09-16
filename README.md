@@ -4,7 +4,7 @@
 
 ## Description
 
-A web developer's version of Breakout arcade video game developed and published by Atari, Inc. and released in 1976. Break your way though each level of code to earn MVP status! Once in the scoreboard room, type in "candy" or "space" to access additional games created to reflect our development throughout the past three months at the Gerogia Institute of Technology Full-Stack Development Bootcamp.
+A web developer's version of Breakout arcade video game developed and published by Atari, Inc. and released in 1976. Break your way through each level of code to earn MVP status! Once in the scoreboard room, type in "candy" or "space" to access additional games created to reflect our development throughout the past three months at the Georgia Institute of Technology Full-Stack Development Bootcamp.
 
 ![image](https://user-images.githubusercontent.com/101753839/188037835-2c6e7e51-4ee9-4519-9223-a8a4fdc97264.png)
 
