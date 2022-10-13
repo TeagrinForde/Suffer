@@ -16,7 +16,7 @@ const Home = () => {
       </h1>
       <h3 className="homeBody">
         
-              Click Anywhere to Begin
+        Click Anywhere to Begin
           
       </h3>
     </div>
